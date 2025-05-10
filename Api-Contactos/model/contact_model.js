@@ -24,10 +24,21 @@ const contactSchema = new mongoose.Schema(
             trim: true,
             unique: true, // Evita duplicar correos
             lowercase: true, // Convierte todos los caracteres a minusculas
-
-
-        } 
-
-    }
-
-);
+            match: [/^\S+@\S+\.\S+$/, 'Por favor, ingresa un correo válido'],
+        },
+        phone:{
+            type: String,
+            required: [true, "Es telefono es obligatorio"],
+            trim: true,
+            unique: true,
+            // funcion para validar que el numero ingresado sea valido
+            match: [/^\S+@\S+\.\S+$/, 'Por favor, ingresa un numero de telefono válido'],  
+        },
+        addres:{
+            type: String,
+            required: true,
+            trim: true,
+            minlength: [2, "La direccion debe tener al menos dos caracteres"],
+            maxlength: [50,"La direccion no debe de rebasar los 50 caracteres"],
+        }                  
+    })
