@@ -55,12 +55,12 @@ export const UpdateContactById = async (contactid, data)=>{
             {new: true} // Retorna el documento actualizado
  
         );
-        if(!updateContact) throw new Error("El contacto no existe "+ error.message);
+        if(!updateContact) throw new Error("El contacto no existe");
         // retorna el contacto
         return updateContact;
         
     } catch (error) {
-      throw new Error("Error al actualizar el contacto ", error.message);
+      throw new Error("Error al actualizar el contacto " + error.message);
     }
 };
 
