@@ -50,4 +50,5 @@ const contactSchema = new mongoose.Schema(
           },                  
     })
 
-    
+// Exportar el modelo que se creo
+module.exports = mongoose.model("Contact", contactSchema);
