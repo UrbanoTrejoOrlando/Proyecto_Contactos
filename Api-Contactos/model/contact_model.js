@@ -17,7 +17,16 @@ const contactSchema = new mongoose.Schema(
             minlength: [2, "El apellido debe tener al menos dos caracteres"],
             maxlength: [50,"El apellid no debe de rebasar los 50 caracteres"],
 
-        }
+        },
+        email: {
+            type: String,
+            required: [true, "El correo debe de ser obligatorio"],
+            trim: true,
+            unique: true, // Evita duplicar correos
+            lowercase: true, // Convierte todos los caracteres a minusculas
+
+
+        } 
 
     }
 
