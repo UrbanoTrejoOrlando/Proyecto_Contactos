@@ -12,10 +12,24 @@ export const CreateContact = async (data)=>{
     return newContact;
 
     }catch(error){  
-    throw new Error("Error al crear el libro" + error.message);
+    throw new Error("Error al crear el contacto" + error.message);
 
     }
 };
 
+// Funcion para obtener un contacto
+export const GetAllContact = async() =>{
+    try{
+    // Obtener el contacto
+    const contacts = new Contactos.find();
+    // Retornar contactos
+    return contacts;
 
+    }catch(error){
+    throw new Error("Error al obtener el contacto" + error.message);
+    }
+    
+}
+
+export 
 
