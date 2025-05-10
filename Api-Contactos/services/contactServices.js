@@ -57,6 +57,5 @@ export const UpdateContactById = async (contactid)=>{
     } catch (error) {
       throw new Error("Error al actualizar el contacto ", error.message);
     }
-
-}
+};
 
