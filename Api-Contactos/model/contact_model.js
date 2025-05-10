@@ -10,7 +10,7 @@ const contactSchema = new mongoose.Schema(
             minlength: [2, "El nombre debe tener al menos dos caracteres"],
             maxlength: [50,"El nombre no debe de rebasar los 50 caracteres"],
         },
-        last_name:{
+        last_name: {
             type: String,
             required: [true, "El segundo apellido es obligatorio"],
             trim: true,
