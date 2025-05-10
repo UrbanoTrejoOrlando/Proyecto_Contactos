@@ -20,16 +20,31 @@ export const CreateContact = async (data)=>{
 // Funcion para obtener un contacto
 export const GetAllContact = async() =>{
     try{
-    // Obtener el contacto
-    const contacts = new Contactos.find();
-    // Retornar contactos
-    return contacts;
+        // Obtener el contacto
+        const contacts = new Contactos.find();
+        // Retornar contactos
+        return contacts;
 
     }catch(error){
-    throw new Error("Error al obtener el contacto" + error.message);
+        throw new Error("Error al obtener el contacto" + error.message);
     }
     
-}
+};
 
-export 
+// Funcion para obtener un contacto por su Id
+export const GetContactById = async(contactid)=>{
+    try {
+        // Obtencion del contacto
+        const contact = new Contactos.findById(contactid);
+        // Validar si el contacto existe 
+        if(!contact) throw new Error("El contacto no existe "+ error.message);
+        // retorna el contacto
+        return contact;
+
+    } catch (error) {
+        throw new Error("Error al obtener el contacto" + error.message);
+    }
+};
+
+// Funcion para 
 
