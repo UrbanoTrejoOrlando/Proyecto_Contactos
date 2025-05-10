@@ -47,9 +47,14 @@ export const GetContactById = async(contactid)=>{
 };
 
 // Funcion para actualizar un contacto
-export const UpdateContactById = async (contactid)=>{
+export const UpdateContactById = async (contactid, data)=>{
     try {
-        const updateContact = await Contactos.findByIdAndUpdate(contactid);
+        const updateContact = await Contactos.findByIdAndUpdate(
+            contactid,
+            data,
+            {new: true} // Retorna el documento actualizado
+ 
+        );
         if(!updateContact) throw new Error("El contacto no existe "+ error.message);
         // retorna el contacto
         return updateContact;
