@@ -27,6 +27,7 @@ const GetAllContact = async() =>{
         return contacts;
 
     }catch(error){
+        // Mensaje de errro si algo falla
         throw new Error("Error al obtener el contacto" + error.message);
     }
     
