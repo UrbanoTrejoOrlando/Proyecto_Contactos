@@ -14,6 +14,7 @@ const createContact = async (req, res) =>{
             user: newContact,
         });
     } catch (error) {
+        // Mensaje de error por si algo falla
         res.status(400).json({
             error: error.message,
         });
