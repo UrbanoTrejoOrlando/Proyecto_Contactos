@@ -25,6 +25,7 @@ const getAllContact = async (req,res)=>{
     try {
          // Obtener todos los contactos
         const contacts = await contactServices.GetAllContact();
+        // Configuracion del json
         res.status(200).json(contacts);
 
     } catch (error) {
