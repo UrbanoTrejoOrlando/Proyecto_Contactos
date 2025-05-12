@@ -2,7 +2,7 @@
 const Contactos = require("../model/contactModel");
 
 //Funcion para crear un contacto
-export const CreateContact = async (data)=>{
+const CreateContact = async (data)=>{
     try{
     // Creacion del libro
     const newContact = new Contactos(data);
@@ -18,10 +18,10 @@ export const CreateContact = async (data)=>{
 };
 
 // Funcion para obtener un contacto
-export const GetAllContact = async() =>{
+const GetAllContact = async() =>{
     try{
         // Obtener el contacto
-        const contacts = new Contactos.find();
+        const contacts = await Contactos.find();
         // Retornar contactos
         return contacts;
 
@@ -32,10 +32,10 @@ export const GetAllContact = async() =>{
 };
 
 // Funcion para obtener un contacto por su Id
-export const GetContactById = async(contactid)=>{
+const GetContactById = async(contactid)=>{
     try {
         // Obtencion del contacto
-        const contact = new Contactos.findById(contactid);
+        const contact = await Contactos.findById(contactid);
         // Validar si el contacto existe 
         if(!contact) throw new Error("El contacto no existe "+ error.message);
         // retorna el contacto
@@ -47,7 +47,7 @@ export const GetContactById = async(contactid)=>{
 };
 
 // Funcion para actualizar un contacto
-export const UpdateContactById = async (contactid, data)=>{
+const UpdateContactById = async (contactid, data)=>{
     try {
         const updateContact = await Contactos.findByIdAndUpdate(
             contactid,
@@ -64,8 +64,8 @@ export const UpdateContactById = async (contactid, data)=>{
     }
 };
 
-// Funcion para eliminar un contacto
-export const DeleteContact = async(contactid)=>{
+// Funcion para eliminar un contactoc
+const DeleteContact = async(contactid)=>{
     try {
       const deletecontact = await Contactos.findByIdAndDelete(contactid);
       if(!deletecontact) throw new Error("El contacto no existe");
@@ -75,4 +75,8 @@ export const DeleteContact = async(contactid)=>{
     } catch (error) {
       throw new Error("Error al actualizar al contacto" + error.message);
     }
-}
+};
+
+module.exports = {CreateContact,GetAllContact,GetContactById,UpdateContactById,DeleteContact};
+
+
