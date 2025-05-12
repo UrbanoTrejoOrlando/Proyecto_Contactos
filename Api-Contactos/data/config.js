@@ -7,11 +7,13 @@ require("dotenv").config();
 const URL = process.env.URL;
 
 // Conexion a la base de datos 
-export const ConnectDB = async () => {
+const ConnectDB = async () => {
 try{
     await mongoose.connect(URL);
     console.log("Database running");
 }catch(error){
-    console.log("Cant connecto to database");
+    console.log("Cant connecto to database "+ error);
 }  
 }
+
+module.exports = {ConnectDB};
