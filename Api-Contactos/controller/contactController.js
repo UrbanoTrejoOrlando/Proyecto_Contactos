@@ -43,6 +43,7 @@ const getContactById = async(req,res)=>{
     try {
         // Obtener un contacto por el id
         const contact = await contactServices.GetContactById(contactid);
+        // Mensaje de error por si algo falla
         res.status(200).json(contact);
     } catch (error) {
         res.status(400).json({
