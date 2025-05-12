@@ -10,6 +10,7 @@ const URL = process.env.URL;
 const ConnectDB = async () => {
 try{
     await mongoose.connect(URL);
+    // Mensaje de que la base de datos funciona correctamente
     console.log("Database running");
 }catch(error){
     console.log("Cant connecto to database "+ error);
