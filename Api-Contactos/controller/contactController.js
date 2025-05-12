@@ -46,6 +46,7 @@ const getContactById = async(req,res)=>{
         // Configuracion del json
         res.status(200).json(contact);
     } catch (error) {
+        // Mensaje de error por si algo falla
         res.status(400).json({
             error: error.message,
         });   
