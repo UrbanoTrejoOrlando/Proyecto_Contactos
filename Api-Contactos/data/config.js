@@ -15,5 +15,5 @@ try{
     console.log("Cant connecto to database "+ error);
 }  
 }
-
+// Exportacion del modulo
 module.exports = {ConnectDB};
