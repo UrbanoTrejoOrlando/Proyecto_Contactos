@@ -79,5 +79,6 @@ const deleteContact = async (req,res) =>{
         }); 
     }
 };
- 
+
+// Exportacion de las peticiones para que se utilizen en otras partes del proyecto
 module.exports = {createContact,getAllContact,getContactById,updateContact,deleteContact};
