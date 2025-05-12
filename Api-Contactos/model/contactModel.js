@@ -30,8 +30,6 @@ const contactSchema = new mongoose.Schema(
             type: String,
             required: [true, "Es telefono es obligatorio"],
             trim: true,
-            // funcion para validar que el numero ingresado sea valido
-            match: [/^\S+@\S+\.\S+$/, 'Por favor, ingresa un numero de telefono válido'],  
         },
         address:{
             type: String,
@@ -51,4 +49,4 @@ const contactSchema = new mongoose.Schema(
     })
 
 // Exportar el modelo que se creo
-module.exports = mongoose.model("Contact", contactSchema);
+module.exports = mongoose.model("Contactos", contactSchema);
