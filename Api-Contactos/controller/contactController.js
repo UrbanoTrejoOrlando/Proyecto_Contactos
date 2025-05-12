@@ -24,7 +24,7 @@ const createContact = async (req, res) =>{
 // Peticion para obtener todos los contactos
 const getAllContact = async (req,res)=>{
     try {
-         // Obtener todos los contactos
+        // Obtener todos los contactos
         const contacts = await contactServices.GetAllContact();
         // Configuracion del json
         res.status(200).json(contacts);
@@ -41,6 +41,7 @@ const getAllContact = async (req,res)=>{
 const getContactById = async(req,res)=>{
     const {contactid} = req.params;
     try {
+        // Obtener un contacto por el id
         const contact = await contactServices.GetContactById(contactid);
         res.status(200).json(contact);
     } catch (error) {
