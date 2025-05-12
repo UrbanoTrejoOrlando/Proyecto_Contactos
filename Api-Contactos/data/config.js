@@ -13,6 +13,7 @@ try{
     // Mensaje de que la base de datos funciona correctamente
     console.log("Database running");
 }catch(error){
+    // Mensaje de error si la conexion falla
     console.log("Cant connecto to database "+ error);
 }  
 }
