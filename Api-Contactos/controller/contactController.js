@@ -30,6 +30,7 @@ const getAllContact = async (req,res)=>{
         res.status(200).json(contacts);
 
     } catch (error) {
+        // Mensaje de error por si algo falla
         res.status(400).json({
             error: ("Error fallo la conexion " + error.message),
         });   
