@@ -52,12 +52,14 @@ const GetContactById = async(contactid)=>{
 // Funcion para actualizar un contacto
 const UpdateContactById = async (contactid, data)=>{
     try {
+        
         const updateContact = await Contactos.findByIdAndUpdate(
             contactid,
             data,
             {new: true} // Retorna el documento actualizado
  
         );
+        // Validar si el contacto existe
         if(!updateContact) throw new Error("El contacto no existe");
         // retorna el contacto
         return updateContact;
