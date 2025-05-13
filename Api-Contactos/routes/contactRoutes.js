@@ -4,7 +4,7 @@ const express = require("express");
 const router = express.Router();
 const contactController = require("../controller/contactController");
 
-// Definicion de rutas
+
 // Ruta para crear un contacto
 router.post("/contacts", contactController.createContact);
 // Ruta para obtener todos los contactos
