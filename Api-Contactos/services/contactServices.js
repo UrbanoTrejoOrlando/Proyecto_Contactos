@@ -73,6 +73,7 @@ const DeleteContact = async(contactid)=>{
     try {
         // Eliminacion del contacto por el id
         const deletecontact = await Contactos.findByIdAndDelete(contactid);
+        // Validar si el contacto existe
         if(!deletecontact) throw new Error("El contacto no existe");
         // Retorna el contacto
         return deletecontact;
