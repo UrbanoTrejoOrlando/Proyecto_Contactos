@@ -52,7 +52,7 @@ const GetContactById = async(contactid)=>{
 // Funcion para actualizar un contacto
 const UpdateContactById = async (contactid, data)=>{
     try {
-        
+        // Alctualizacion del contacto por su id
         const updateContact = await Contactos.findByIdAndUpdate(
             contactid,
             data,
