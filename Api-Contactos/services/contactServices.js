@@ -77,7 +77,8 @@ const DeleteContact = async(contactid)=>{
       return deletecontact;
       
     } catch (error) {
-      throw new Error("Error al actualizar al contacto" + error.message);
+        // Mensaje de errro si algo falla
+        throw new Error("Error al actualizar al contacto" + error.message);
     }
 };
 
