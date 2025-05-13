@@ -9,7 +9,7 @@ const contactController = require("../controller/contactController");
 router.post("/contacts", contactController.createContact);
 // Ruta para obtener todos los contactos
 router.get("/contacts", contactController.getAllContact);
-
+//Ruta para obtener un contacto
 router.get("/contacts/:contactid", contactController.getContactById);
 // Ruta para obtener el contacot por id
 router.put("/contacts/:contactid", contactController.updateContact);
