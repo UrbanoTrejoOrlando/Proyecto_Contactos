@@ -1,6 +1,6 @@
 // Importamos express
 const express = require("express");
-// Creacion del enrutador modular
+
 const router = express.Router();
 const contactController = require("../controller/contactController");
 
