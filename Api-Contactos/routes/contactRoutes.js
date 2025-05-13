@@ -16,5 +16,5 @@ router.put("/contacts/:contactid", contactController.updateContact);
 // Ruta para eliminar un contacto
 router.delete("/contacts/:contactid", contactController.deleteContact);
 
-// Exportacion de las rutas
+
 module.exports = router;
