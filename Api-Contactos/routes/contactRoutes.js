@@ -11,7 +11,6 @@ router.post("/contacts", contactController.createContact);
 router.get("/contacts", contactController.getAllContact);
 //Ruta para obtener un contacto
 router.get("/contacts/:contactid", contactController.getContactById);
-//Ruta para actualizar un contacto
 router.put("/contacts/:contactid", contactController.updateContact);
 // Exportacion de las rutas
 router.delete("/contacts/:contactid", contactController.deleteContact);
