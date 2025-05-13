@@ -82,6 +82,7 @@ const DeleteContact = async(contactid)=>{
     }
 };
 
+//Exportacion de funciones
 module.exports = {CreateContact,GetAllContact,GetContactById,UpdateContactById,DeleteContact};
 
 
