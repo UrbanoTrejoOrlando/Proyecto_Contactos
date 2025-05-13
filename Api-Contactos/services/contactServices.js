@@ -63,7 +63,8 @@ const UpdateContactById = async (contactid, data)=>{
         return updateContact;
         
     } catch (error) {
-      throw new Error("Error al actualizar el contacto " + error.message);
+        // Mensaje de errro si algo falla
+        throw new Error("Error al actualizar el contacto " + error.message);
     }
 };
 
