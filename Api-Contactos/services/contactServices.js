@@ -71,10 +71,11 @@ const UpdateContactById = async (contactid, data)=>{
 // Funcion para eliminar un contactoc
 const DeleteContact = async(contactid)=>{
     try {
-      const deletecontact = await Contactos.findByIdAndDelete(contactid);
-      if(!deletecontact) throw new Error("El contacto no existe");
-      // Retorna el contacto
-      return deletecontact;
+        
+        const deletecontact = await Contactos.findByIdAndDelete(contactid);
+        if(!deletecontact) throw new Error("El contacto no existe");
+        // Retorna el contacto
+        return deletecontact;
       
     } catch (error) {
         // Mensaje de errro si algo falla
