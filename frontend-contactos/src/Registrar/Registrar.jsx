@@ -10,6 +10,12 @@ const Registrar = (obtenerDatos) => {
   const [telefono, setTelefono] = React.useState(""); 
   const [direccion, setDireccion] = React.useState("");
 
+  // Fucnion para poder hacer las diferentes solicitudes
+  const cargarDatos = async (contactos)=> {
+    //Conexion con la api petrteneciente al back
+    
+
+  } 
   return (
     <div className="flex items-center justify-center ">
       <form className="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md">
