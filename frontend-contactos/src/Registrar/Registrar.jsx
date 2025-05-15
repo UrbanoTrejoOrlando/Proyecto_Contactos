@@ -13,7 +13,14 @@ const Registrar = (obtenerDatos) => {
   // Fucnion para poder hacer las diferentes solicitudes
   const cargarDatos = async (contactos)=> {
     //Conexion con la api petrteneciente al back
-    
+    const response = await fetch(URL, {
+      method: POST,
+      headers:{
+        "Content-Type": "application/json",
+      },
+      // Convierte el cuerpo del body a json
+    })
+    body: JSON.stringify(contactos);
 
   } 
   return (
