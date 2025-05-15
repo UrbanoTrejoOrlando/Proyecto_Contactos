@@ -1,7 +1,15 @@
 import React from 'react'
 import { UserRound, CircleUserRound, Mail, Phone, MapPinHouseIcon } from 'lucide-react'
+import { URL } from '../common/server'
 
-const Registrar = () => {
+const Registrar = (obtenerDatos) => {
+  // Creacion de variables de estados
+  const [nombre, setNombre] = React.useState("");
+  const [apellidos, setApellidos] = React.useState("");
+  const [correo, setCorreo] = React.useState("");
+  const [telefono, setTelefono] = React.useState(""); 
+  const [direccion, setDireccion] = React.useState("");
+
   return (
     <div className="flex items-center justify-center ">
       <form className="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md">
