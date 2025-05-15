@@ -16,6 +16,7 @@ const Registrar = () => {
         </div>
         
         <div className="mb-4">
+          
           <input 
             type="text"
             placeholder="Apellido"
