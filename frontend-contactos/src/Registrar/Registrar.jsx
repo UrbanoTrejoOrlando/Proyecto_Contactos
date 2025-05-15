@@ -23,6 +23,9 @@ const Registrar = (obtenerDatos) => {
     body: JSON.stringify(contactos);
 
   } 
+
+
+  
   return (
     <div className="flex items-center justify-center ">
       <form className="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md">
