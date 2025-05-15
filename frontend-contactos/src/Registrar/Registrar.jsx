@@ -2,17 +2,63 @@ import React from 'react'
 
 const Registrar = () => {
   return (
-    <>
-    <form>
-      <h2 className="text-2xl font-bold text-black-600 text-center">Registrar Contacto</h2>
-      <div>
-        <input 
-          type="text" 
-        />
-      </div>
-    </form>
+    <div className="flex items-center justify-center ">
+      <form className="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md">
+        <h2 className="text-2xl font-bold text-gray-800 text-center mb-6">Registrar Contacto</h2>
+        
+        <div className="mb-4">
+          <input 
+            type="text"
+            placeholder="Nombre"
+            required  
+            className="w-full px-4 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-green-400"
+          />
+        </div>
+        
+        <div className="mb-4">
+          <input 
+            type="text"
+            placeholder="Apellido"
+            required  
+            className="w-full px-4 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-green-400"
+          />
+        </div>
+        
+        <div className="mb-4">
+          <input 
+            type="email"
+            placeholder="Email"
+            required  
+            className="w-full px-4 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-green-400"
+          />
+        </div>
+        
+        <div className="mb-4">
+          <input 
+            type="tel"
+            placeholder="Teléfono"
+            required  
+            className="w-full px-4 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-green-400"
+          />
+        </div>
+        
+        <div className="mb-6">
+          <input 
+            type="text"
+            placeholder="Dirección"
+            required  
+            className="w-full px-4 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-green-400"
+          />
+        </div>
 
-    </>
+        <button 
+          type="submit"
+          className="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-2 rounded-xl transition duration-200"
+        >
+          Registrar
+        </button>
+      </form>
+    </div>
   )
 }
 
