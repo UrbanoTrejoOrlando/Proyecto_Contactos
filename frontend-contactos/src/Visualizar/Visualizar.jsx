@@ -33,6 +33,7 @@ const Visualizar = () => {
 
   // Funcion para eliminar un contacto por el id
   const EliminarContactos = async (id) => {
+    // Verificacion con Sweetalert
     const confirmacion = await Swal.fire({
       title: '¿Eliminar contacto?',
       text: 'Esta acción no se puede deshacer.',
