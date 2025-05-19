@@ -56,7 +56,6 @@ const Visualizar = () => {
           },
         });
   
-        // Filtrado de contactos
         if (response.ok) {
           setContactos(contactos.filter((contacto) => contacto._id !== id))
           await Swal.fire({
