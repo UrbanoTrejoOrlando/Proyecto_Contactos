@@ -48,6 +48,7 @@ const Visualizar = () => {
     if (confirmacion.isConfirmed) {
       // Validacion de errores
       try {
+        // Funcion par validar la funcion delete
         const response = await fetch(`${URL}/${id}`, {
           method: "DELETE",
           headers: {
