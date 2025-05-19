@@ -60,7 +60,7 @@ const Visualizar = () => {
         if (response.ok) {
           // Validacion del estado
           setContactos(contactos.filter((contacto) => contacto._id !== id))
-
+          // Mensaje con swetalert
           await Swal.fire({
             title: 'Eliminada',
             text: 'El contacto fue eliminado',
