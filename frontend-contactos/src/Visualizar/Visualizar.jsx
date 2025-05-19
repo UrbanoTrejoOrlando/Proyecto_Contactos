@@ -46,7 +46,6 @@ const Visualizar = () => {
     });
     // Verificacio si la confirmacion es valida
     if (confirmacion.isConfirmed) {
-      // Validacion de errores
       try {
         const response = await fetch(`${URL}/${id}`, {
           method: "DELETE",
