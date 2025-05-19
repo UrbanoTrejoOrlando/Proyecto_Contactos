@@ -75,7 +75,7 @@ const Visualizar = () => {
       } catch (error) {
         // Mensaje de error
         console.error("Error al eliminar contacto:", error);
-        // Mensaje personalizado con sweetalert
+        
         await Swal.fire({
           title: 'Error',
           text: 'No se pudo eliminar el contacto',
