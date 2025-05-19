@@ -73,7 +73,6 @@ const Visualizar = () => {
   
         }
       } catch (error) {
-        // Mensaje de error
         console.error("Error al eliminar contacto:", error);
         await Swal.fire({
           title: 'Error',
