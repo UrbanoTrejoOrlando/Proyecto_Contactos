@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { URL } from '../common/server'; // Asegúrate de que esta ruta esté bien definida
+import { URL } from '../common/server';
 
 const FormularioEditar = () => {
-  const { id } = useParams(); // Obtiene el ID de la URL
+  // Obtener el ID de la URL
+  const { id } = useParams(); 
   const navigate = useNavigate();
 
   const [contacto, setContacto] = useState({
