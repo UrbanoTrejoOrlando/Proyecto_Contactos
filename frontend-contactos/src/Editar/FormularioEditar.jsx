@@ -94,6 +94,7 @@ const FormularioEditar = () => {
             focus-within:ring-2 focus-within:ring-blue-400">
             <Mail className="text-gray-400 w-5 h-5 mr-3" />
           <input
+            type="text"
             name="email"
             value={contacto.email}
             onChange={handleChange}
@@ -101,13 +102,17 @@ const FormularioEditar = () => {
             placeholder="Correo electrónico"
           />
         </div>
-        <input
-          name="phone"
-          value={contacto.phone}
-          onChange={handleChange}
-          className="w-full p-2 border rounded"
-          placeholder="Teléfono"
-        />
+        <div className="mb-4 flex items-center border rounded-xl px-4 py-2 
+            focus-within:ring-2 focus-within:ring-blue-400">
+          <input
+            type="text"
+            name="phone"
+            value={contacto.phone}
+            onChange={handleChange}
+            className="w-full outline-rouder"
+            placeholder="Teléfono"
+          />
+        </div>
         <input
           name="address"
           value={contacto.address}
