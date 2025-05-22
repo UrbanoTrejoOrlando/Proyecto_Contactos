@@ -64,7 +64,7 @@ const Registrar = ({ obtenerDatos }) => {
   }
 
   return (
-    <div className="flex items-center justify-center pt-0">
+    <div className="flex items-center justify-center ">
       <form onSubmit={eventoFormulario} className="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md">
         <h2 className="text-2xl font-bold text-gray-800 text-center mb-6">Registrar Contacto</h2>
         
