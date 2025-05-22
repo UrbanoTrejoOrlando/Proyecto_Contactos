@@ -69,10 +69,12 @@ const FormularioEditar = () => {
         <div className="mb-4 flex items-center border rounded-xl px-4 py-2 
             focus-within:ring-2 focus-within:ring-blue-400">
           <input
+            type="text"
             name="first_name"
             value={contacto.first_name}
             onChange={handleChange}
             placeholder="Nombre"
+            className="w-full outline-none"
           />
         </div>
         <input
