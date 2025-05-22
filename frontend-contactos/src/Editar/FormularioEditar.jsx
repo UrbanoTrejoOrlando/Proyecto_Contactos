@@ -90,13 +90,15 @@ const FormularioEditar = () => {
             placeholder="Apellidos"
           />
         </div>
-        <input
-          name="email"
-          value={contacto.email}
-          onChange={handleChange}
-          className="w-full p-2 border rounded"
-          placeholder="Correo electrónico"
-        />
+        <div>
+          <input
+            name="email"
+            value={contacto.email}
+            onChange={handleChange}
+            className="w-full p-2 border rounded"
+            placeholder="Correo electrónico"
+          />
+        </div>
         <input
           name="phone"
           value={contacto.phone}
