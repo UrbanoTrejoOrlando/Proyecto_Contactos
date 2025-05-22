@@ -121,7 +121,7 @@ const Visualizar = () => {
                   <UserPen
                     className="text-blue-500 cursor-pointer hover:text-blue-700 mx-auto"
                     size={20}
-                    onClick={() => navigate(`/editar/${contacto._id}`)}
+                    onClick={() => navegar(`/editar/${contacto._id}`)}
                   />
                 </td>
                 <td className="border p-2 text-center">
