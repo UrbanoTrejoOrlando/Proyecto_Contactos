@@ -78,13 +78,16 @@ const FormularioEditar = () => {
             className="w-full outline-none"
           />
         </div>
-        <input
-          name="last_name"
-          value={contacto.last_name}
-          onChange={handleChange}
-          className="w-full p-2 border rounded"
-          placeholder="Apellidos"
-        />
+        <div className="mb-4 flex items-center border rounded-xl px-4 py-2 
+            focus-within:ring-2 focus-within:ring-blue-400">
+          <input
+            name="last_name"
+            value={contacto.last_name}
+            onChange={handleChange}
+            className="w-full p-2 border rounded"
+            placeholder="Apellidos"
+          />
+        </div>
         <input
           name="email"
           value={contacto.email}
