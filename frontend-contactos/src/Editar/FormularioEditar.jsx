@@ -92,6 +92,7 @@ const FormularioEditar = () => {
         </div>
         <div className="mb-4 flex items-center border rounded-xl px-4 py-2 
             focus-within:ring-2 focus-within:ring-blue-400">
+            <Mail className="text-gray-400 w-5 h-5 mr-3" />
           <input
             name="email"
             value={contacto.email}
