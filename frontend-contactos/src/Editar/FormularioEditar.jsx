@@ -92,7 +92,7 @@ const FormularioEditar = () => {
         </div>
         <div className="mb-4 flex items-center border rounded-xl px-4 py-2 
             focus-within:ring-2 focus-within:ring-blue-400">
-            <Mail className="text-gray-400 w-5 h-5 mr-3" />
+          <Mail className="text-gray-400 w-5 h-5 mr-3" />
           <input
             type="text"
             name="email"
@@ -104,7 +104,7 @@ const FormularioEditar = () => {
         </div>
         <div className="mb-4 flex items-center border rounded-xl px-4 py-2 
             focus-within:ring-2 focus-within:ring-blue-400">
-            <Phone className="text-gray-400 w-5 h-5 mr-3" />
+          <Phone className="text-gray-400 w-5 h-5 mr-3" />
           <input
             type="text"
             name="phone"
@@ -114,13 +114,18 @@ const FormularioEditar = () => {
             placeholder="Teléfono"
           />
         </div>
-        <input
-          name="address"
-          value={contacto.address}
-          onChange={handleChange}
-          className="w-full p-2 border rounded"
-          placeholder="Dirección"
-        />
+        <div className="mb-4 flex items-center border rounded-xl px-4 py-2 
+            focus-within:ring-2 focus-within:ring-blue-400">
+          <MapPinHouseIcon className="text-gray-400 w-5 h-5 mr-3" />
+          <input
+            name="address"
+            value={contacto.address}
+            onChange={handleChange}
+            className="w-full outline-rouder"
+            placeholder="Dirección"
+          />
+        </div>
+
         <button
           type="submit"
           className="w-full bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
