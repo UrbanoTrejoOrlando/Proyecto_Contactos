@@ -2,8 +2,11 @@ import React, { useEffect } from 'react'
 import { URL } from '../common/server';
 import { UserPen, Trash2 } from 'lucide-react';
 import Swal from 'sweetalert2';
+import { useNavigate } from 'react-router-dom';
 
 const Visualizar = () => {
+  // Creacion de variable para redireccionar al siguiente icono editar
+  const navegar = useNavigate();
   // Creacion de variables de estados
   const [contactos, setContactos] = React.useState([]);
   const [busqueda, setBusqueda] = React.useState("");
