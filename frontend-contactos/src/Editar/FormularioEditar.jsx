@@ -6,7 +6,7 @@ const FormularioEditar = () => {
   // Obtener el ID de la URL
   const { id } = useParams(); 
   const navigate = useNavigate();
-
+  // Funciones de estado para obtener los datos del formulario
   const [contacto, setContacto] = useState({
     first_name: '',
     last_name: '',
