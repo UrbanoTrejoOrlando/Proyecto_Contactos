@@ -84,7 +84,7 @@ const FormularioEditar = () => {
             name="last_name"
             value={contacto.last_name}
             onChange={handleChange}
-            className="w-full p-2 border rounded"
+            className="w-full outline-none"
             placeholder="Apellidos"
           />
         </div>
