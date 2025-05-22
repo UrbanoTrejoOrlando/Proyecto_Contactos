@@ -90,12 +90,13 @@ const FormularioEditar = () => {
             placeholder="Apellidos"
           />
         </div>
-        <div>
+        <div className="mb-4 flex items-center border rounded-xl px-4 py-2 
+            focus-within:ring-2 focus-within:ring-blue-400">
           <input
             name="email"
             value={contacto.email}
             onChange={handleChange}
-            className="w-full p-2 border rounded"
+            className="w-full outline-none"
             placeholder="Correo electrónico"
           />
         </div>
