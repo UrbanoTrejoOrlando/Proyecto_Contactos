@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, resolvePath } from 'react-router-dom';
 import { URL } from '../common/server';
 import { UserRound, CircleUserRound, Mail, Phone, MapPinHouseIcon } from 'lucide-react'
+import Swal from 'sweetalert2';
 
 const FormularioEditar = () => {
   // Obtener el ID de la URL
@@ -42,25 +43,62 @@ const FormularioEditar = () => {
   // Enviar datos actualizados
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      const response = await fetch(`${URL}/${id}`, {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(contacto)
-      });
-
-      if (response.ok) {
-        navigate('/visualizar'); // Redirige a la lista
-      } else {
-        console.error('Error al actualizar el contacto');
+  
+    // Paso 1: Confirmación antes de actualizar
+    const confirmacion = await Swal.fire({
+      title: '¿Seguro que quieres actualizar este contacto?',
+      icon: 'question',
+      showCancelButton: true,
+      confirmButtonText: 'Sí',
+      cancelButtonText: 'Cancelar',
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33'
+    });
+  
+    // Si el usuario confirmó:
+    if (confirmacion.isConfirmed) {
+      try {
+        const response = await fetch(`${URL}/${id}`, {
+          method: 'PUT',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(contacto)
+        });
+  
+        if (response.ok) {
+          await Swal.fire({
+            icon: 'success',
+            title: 'Actualizado',
+            text: 'El contacto se actualizó correctamente',
+            confirmButtonColor: '#3085d6',
+            confirmButtonText: 'Aceptar'
+          });
+          navigate('/visualizar');
+        } else {
+          await Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'No se pudo actualizar el contacto. Intenta nuevamente.',
+            confirmButtonColor: '#d33',
+            confirmButtonText: 'Cerrar'
+          });
+          console.error('Error al actualizar el contacto');
+        }
+  
+      } catch (error) {
+        await Swal.fire({
+          icon: 'error',
+          title: 'Error de red',
+          text: 'Ocurrió un problema al enviar la solicitud.',
+          confirmButtonColor: '#d33',
+          confirmButtonText: 'Cerrar'
+        });
+        console.error('Error al enviar la solicitud:', error);
       }
-    } catch (error) {
-      console.error('Error al enviar la solicitud:', error);
     }
   };
-
+  
   return (
     <div className="flex items-center justify-center">
       <form onSubmit={handleSubmit} className="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md">
@@ -128,7 +166,8 @@ const FormularioEditar = () => {
 
         <button
           type="submit"
-          className="w-full bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+          className="w-full bg-blue-500 hover:bg-blue-600 
+          text-white font-semibold py-2 rounded-xl transition duration-200"
         >
           Guardar Cambios
         </button>
