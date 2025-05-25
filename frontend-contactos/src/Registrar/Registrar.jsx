@@ -2,9 +2,14 @@ import React from 'react'
 import { UserRound, CircleUserRound, Mail, Phone, MapPinHouseIcon } from 'lucide-react'
 import { URL } from '../common/server'
 import Swal from 'sweetalert2'
+import { useNavigate } from 'react-router-dom'
+
 
 // Recibe la función obtenerDatos desde props
 const Registrar = ({ obtenerDatos }) => {
+  // Variable de estado para el redireccionamiento
+  const navigate = useNavigate();
+
   // Creacion de variables de estados
   const [nombre, setNombre] = React.useState("");
   const [apellidos, setApellidos] = React.useState("");
@@ -34,7 +39,9 @@ const Registrar = ({ obtenerDatos }) => {
         showConfirmButton: false,
         timer: 1500
       });
-
+      // Redireccionamiento al componente visualizar
+      navigate('/visualizar');
+    
       // Llamada a la funcion para refrescar datos actualizados
       obtenerDatos(); 
     }
