@@ -131,7 +131,7 @@ const Visualizar = () => {
 
   return (
     <>
-      <div className="flex flex-col items-center  ">
+      <div className="flex flex-col items-center">
         <h2 className="text-2xl font-bold text-gray-800 text-center mb-4">Lista de Contactos</h2>
 
         <div className="flex items-center gap-2 mb-4 w-full max-w-4xl">
